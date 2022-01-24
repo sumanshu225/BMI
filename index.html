@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/92b21ed5b0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style/style.css" />
+</head>
+
+<body>
+  <div class="wrap" style="background-image: url('https://cdn.pixabay.com/photo/2018/04/04/14/36/seamless-3289971_960_720.png');">
+    <div class="heading">
+      <p class="toUpper">bmi calculator</p>
+    </div>
+    <div class="cointainer">
+      <div class="bmiCal">
+        <div class="buttons">
+          <button class="btn Us">US</button>
+          <button class="btn Metric active">Metric</button>
+        </div>
+        <div class="inputs">
+          <span class="tag height">Height</span>
+          <div class="border">
+            <input type="text" id="heightvalCm" class="adjustMetric" placeholder="Centimetrers" />
+            <!-- <input type="number" id="heightvalFeet" class="adjustUs" placeholder="Feet"/> -->
+            <!-- <input type="number" id="heightvalInch" class="adjustUs" placeholder="Inch"/> -->
+          </div>
+        </div>
+        <div class="inputs">
+          <span class="tag Weights">Weight</span>
+          <div class="border">
+            <input type="text" id="weightValKg" class="adjustMetric" placeholder="Kg" />
+            <!-- <input type="number" id="weightValPound" class="adjustMetric" placeholder="Pounds"/> -->
+          </div>
+        </div>
+        <div class="inputs">
+          <button id="cal">
+            <span><i class="fas fa-calculator"></i></span>
+            <span>Calculate BMI</span>
+          </button>
+        </div>
+        <div class="result">
+          <p>Result</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  /* border: 1px solid var(--dark); */
+  height: 100%;
+  /* background: url(https://cdn.pixabay.com/photo/2018/04/04/14/36/seamless-3289971_960_720.png); */
+  background-size: cover;
+  opacity: 0.8;
+  z-index: -2;
+}
+/* variables */
+
+:root {
+  --Primary: #ffff05;
+  --hover: #ff4500;
+  --border-color: black;
+  --light: #fcffa4;
+  --secondary: #ffa500;
+  --dark: #b22222;
+}
+
+::placeholder {
+  color: var(--border-color);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: var(--border-color);
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
+}
+/* utility clases */
+
+.toUpper {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.border {
+  /* background-color: orchid; */
+  flex-basis: 60%;
+  /* height: 100%; */
+  display: flex;
+  padding: 2px;
+  /* border: 1px solid brown; */
+  box-sizing: border-box;
+}
+
+.adjustUs {
+  width: 65%;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  text-align: center;
+}
+
+.adjustMetric {
+  width: 80%;
+  padding: 0.2rem;
+  margin: auto;
+  text-align: center;
+}
+
+/* heading */
+
+.heading {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: "ZCOOL KuaiLe", cursive;
+  font-size: 3rem;
+  border: 0.15rem solid var(--border-color);
+  color: var(--hover);
+  text-shadow: 1px 1px black;
+}
+
+.heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-image: linear-gradient(var(--Primary), var(--hover));
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* bmi Calculator */
+
+.cointainer {
+  height: 90%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: linear-gradient(var(--darkBlue2), var(--light)); */
+}
+
+.bmiCal {
+  position: relative;
+  border: 0.15rem solid var(--border-color);
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 70%;
+  flex-basis: 30%;
+  box-sizing: border-box;
+  background-color: var(--secondary);
+  padding: 2rem;
+  font-weight: bold;
+}
+
+.buttons {
+  flex-basis: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--light);
+  position: absolute;
+  border-radius: 1.3rem 1.3rem 0 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+}
+
+.btn {
+  display: inline;
+  flex-basis: 50%;
+  height: 100%;
+  border: none;
+  /* margin: 0 13px; */
+  border-radius: 0 1.3rem 0 0;
+  background-color: var(--hover);
+  cursor: pointer;
+  color: var(--border-color);
+  font-size: 1.3rem;
+  border-bottom: 0.15rem solid var(--border-color);
+  font-family: "ZCOOL KuaiLe", cursive;
+  font-weight: bold;
+  color: var(--Primary);
+}
+
+button:hover {
+  background-color: var(--dark);
+  text-shadow: 1px 1px black;
+}
+.btn:first-child {
+  border-radius: 1.3rem 0 0 0;
+  border-right: 0.15rem solid var(--border-color);
+}
+
+.active {
+  background-color: var(--dark);
+  color: var(--Primary);
+  text-shadow: 1px 1px black;
+}
+
+.inputs {
+  transform: translateY(20px);
+  flex-basis: 15%;
+  border: 0.15rem solid var(--border-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--Primary);
+  color: var(--border-color);
+  font-size: 1.1rem;
+}
+
+.tag {
+  flex-basis: 40%;
+  text-align: center;
+}
+
+#cal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: var(--hover);
+  /* padding: 0.4rem 0; */
+  font-size: 1.2rem;
+  color: var(--Primary);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#cal:hover {
+  background-color: var(--dark);
+  color: var(--Primary);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 20%;
+  border: 0.15rem solid var(--border-color);
+  background-color: var(--light);
+  color: var(--border-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+input {
+  background-color: var(--light);
+  padding: 5px;
+  color: var(--border-color);
+  font-size: 1.1rem;
+  border: 2px solid var(--border-color);
+  font-weight: 500;
+  border-radius: 0.4rem;
+}
+.fas {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+
+/* Media Query */
+
+@media (max-width: 950px) {
+  .bmiCal {
+    flex-basis: 80%;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .heading {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .bmiCal {
+    flex-basis: 96%;
+  }
+  html {
+    font-size: 11px;
+  }
+}
+
+@media (max-height: 600px) {
+  .bmiCal {
+    height: 90%;
+  }
+  html {
+    font-size: 11px;
+  }
+}
